@@ -1,4 +1,4 @@
-**This is my .dotfile repositary**
+**This is zm4k's .dotfile repository**
 
 The following files were added:
 - .vimrc
