@@ -104,3 +104,7 @@ nmap <space> <C-D>
 nmap <backspace> <C-U>
 nmap 11 :w<enter>
 nmap 22 :wq<enter>
+"
+" F U N C T I O N S
+"
+so ~/.vim/functions/tagselection
