@@ -107,4 +107,4 @@ nmap 22 :wq<enter>
 "
 " F U N C T I O N S
 "
-so ~/.vim/functions/tagselection
+so ~/.vim/functions/tagselection.vim
