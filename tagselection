@@ -21,7 +21,8 @@ nmap ,,, viw,,,
 vnoremap ,,, <Esc>:call TagSelection()<CR>
 
 function! TagSelection()
-  let tag = input("Tag name (include attributes)? ")
+  " let tag = input("Tag name (include attributes)? ") "ask the user for a tag name
+  let tag = "para" "define a tag name
   if strlen(tag) == 0
     return
   endif
