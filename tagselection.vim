@@ -16,6 +16,8 @@
 " </p>
 " Notice the attributes have been stripped from the closing tag.
 "
+" to search for e.g. all <p> tags with arbitrary content use :/<p>.\+<\/p> 
+"
 " Use nmap, not nnoremap, since we do want to use an existing mapping.
 nmap ,,, viw,,,
 vnoremap ,,, <Esc>:call TagSelection()<CR>
