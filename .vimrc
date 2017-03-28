@@ -79,7 +79,7 @@ set showcmd
 set hlsearch
 set ignorecase
 set smartcase
-set autoindent
+set autoindent "set paste to disable
 set nostartofline
 set ruler
 set visualbell
