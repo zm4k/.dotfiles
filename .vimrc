@@ -100,10 +100,10 @@ set list "Display all Tabs and Ends of lines (Dislays these hidden characters)
 "set noexpandtab
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab 
 "----key mappings----------------------
-nmap <space> <C-D>
-nmap <backspace> <C-U>
-nmap 11 :w<enter>
-nmap 22 :wq<enter>
+nnoremap <space> <C-D>
+nnoremap <backspace> <C-U>
+nnoremap 11 :w<enter>
+nnoremap 22 :wq<enter>
 "
 " F U N C T I O N S
 "
