@@ -92,7 +92,7 @@ vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
 " F U N C T I O N S 
 "-------------------
 "
-so ~/.vim/functions/tagselection.vim
+"so ~/.vim/functions/tagselection.vim
 
 "
 "---------
