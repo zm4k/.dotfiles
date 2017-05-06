@@ -1,23 +1,19 @@
-"------------------------------------------------------------------
-"VumbleVim
-set nocompatible              " be iMproved, required
-filetype off                  " required
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+"---------------
+" P L U G I N S 
+"---------------
+"
+"--Vundle--
+"
+set nocompatible "be iMproved, required
+filetype off "required
+set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
 call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'html-xml-tag-matcher'
-" Track the engine.
-"--ultisnips--------------------------------------------------------
-Plugin 'SirVer/ultisnips'
+Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
 "
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+"--UltiSnips--
 "
-" " Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
+Plugin 'SirVer/ultisnips' "UltiSnip engine
+Plugin 'honza/vim-snippets' "handles the actual snippets
 "set rtp+=~/.vim/UltiSnips
 set rtp+=~/.vim/bundle/ultisnips/
 let g:UltiSnipsUsePythonVersion = 2
@@ -29,45 +25,24 @@ let g:UltiSnipsSnippetsDir="~/.vim/bundle/ultisnips/"
 let g:UltiSnipsSnippetDirectories="~/.vim/bundle/ultisnips/"
 "let g:UltiSnipsSnippetDirectories="~/.vim/ultisnips_rep/"
 "
-" Vim plugin for intensely orgasmic commenting
+"--NerdCommenter--
+"
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDCreateDefaultMappings = 1
 let mapleader = ","
 "
-"--ultisnips--------------------------------------------------------
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-"Plugin 'ascenator/L9', {'name': 'newL9'}
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-filetype plugin on
+"--Disabled Plugins--
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'html-xml-tag-matcher'
+call vundle#end() "required
+filetype plugin indent on "required
+filetype plugin on "to ignore plugin indent changes
 "
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this lin
+"-----------------
+" S E T T I N G S 
+"-----------------
 "
-"--------------------------------------
 "let g:solarized_termcolors=256
 syntax enable
 set background=dark
@@ -92,29 +67,65 @@ set cursorline
 set scrolloff=999 "number of context lines you would like to see above and below the cursor
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list "Display all Tabs and Ends of lines (Dislays these hidden characters)
-"----tabstops--------------------------
-"set expandtab "insert space characters whenever the tab key is pressed, if you want to enter a real tab character use Ctrl-V<Tab>, use :retab to change all the existing tab characters to match the current tab settings
-"set tabstop=2
-"set softtabstop=2 " makes the spaces feel like real tabs
-"set shiftwidth=2
-"set noexpandtab
-set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab 
-"echo "(>^.^<)"
-"----key mappings----------------------
+set tabstop=4
+set softtabstop=4 " makes the spaces feel like real tabs
+set shiftwidth=4
+set noexpandtab
+"
+"-------------------------
+" K E Y   M A P P I N G S 
+"-------------------------
+"
 nnoremap <space> <C-D>
 nnoremap <backspace> <C-U>
 nnoremap 11 :w<enter>
 nnoremap 22 :wq<enter>
 "
-inoremap $1< <><esc>i
-inoremap $m <cr><cr>Mit freundlichen Grüßen<cr><cr>Andreas Kamzol<esc>
+inoremap <leader>< <><esc>i
+iab mfg <cr><cr>Mit freundlichen Grüßen<cr><cr>Andreas Kamzol<esc>
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
-
+iab asciicat (>^.^<)
 "
 vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
 vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
-
-
-" F U N C T I O N S
+"
+"-------------------
+" F U N C T I O N S 
+"-------------------
 "
 so ~/.vim/functions/tagselection.vim
+
+"
+"---------
+" H E L P 
+"---------
+"
+"--Vundle--
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this lin
+"
+"--UltiSnips
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+"Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+"Plugin 'L9'
+" Git plugin not hosted on GitHub
+"Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+"Plugin 'ascenator/L9', {'name': 'newL9'}
+"
+"--General--
+"set expandtab "insert space characters whenever the tab key is pressed, if you want to enter a real tab character use Ctrl-V<Tab>, use :retab to change all the existing tab characters to match the current tab settings
