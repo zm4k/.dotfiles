@@ -78,6 +78,7 @@ nnoremap <space> <C-D>
 nnoremap <backspace> <C-U>
 nnoremap 11 :w<enter>
 nnoremap 22 :wq<enter>
+nnoremap 33 :q<enter>
 "
 inoremap <leader>< <><esc>i
 "iab mfg <cr><cr>Mit freundlichen Grüßen<cr><cr>Andreas Kamzol<esc> "use
