@@ -4,7 +4,7 @@
 "
 "--Vundle--
 "
-set nocompatible "be iMproved, required
+set nocompatible "required
 filetype off "required
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
 call vundle#begin()
@@ -14,7 +14,6 @@ Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
 "
 Plugin 'SirVer/ultisnips' "UltiSnip engine
 Plugin 'honza/vim-snippets' "handles the actual snippets
-"set rtp+=~/.vim/UltiSnips
 set rtp+=~/.vim/bundle/ultisnips/
 let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -23,7 +22,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetsDir="~/.vim/bundle/ultisnips/"
 let g:UltiSnipsSnippetDirectories="~/.vim/bundle/ultisnips/"
-"let g:UltiSnipsSnippetDirectories="~/.vim/ultisnips_rep/"
 "
 "--NerdCommenter--
 "
@@ -82,8 +80,9 @@ nnoremap 11 :w<enter>
 nnoremap 22 :wq<enter>
 "
 inoremap <leader>< <><esc>i
-iab mfg <cr><cr>Mit freundlichen Grüßen<cr><cr>Andreas Kamzol<esc>
-iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
+"iab mfg <cr><cr>Mit freundlichen Grüßen<cr><cr>Andreas Kamzol<esc> "use
+"ultisnips instead
+iab pdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 iab asciicat (>^.^<)
 "
 vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
