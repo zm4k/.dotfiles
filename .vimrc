@@ -99,12 +99,22 @@ set list "Display all Tabs and Ends of lines (Dislays these hidden characters)
 "set shiftwidth=2
 "set noexpandtab
 set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab 
+"echo "(>^.^<)"
 "----key mappings----------------------
 nnoremap <space> <C-D>
 nnoremap <backspace> <C-U>
 nnoremap 11 :w<enter>
 nnoremap 22 :wq<enter>
 "
+inoremap $1< <><esc>i
+inoremap $m <cr><cr>Mit freundlichen Grüßen<cr><cr>Andreas Kamzol<esc>
+iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
+
+"
+vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
+vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
+
+
 " F U N C T I O N S
 "
 so ~/.vim/functions/tagselection.vim
