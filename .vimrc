@@ -79,6 +79,7 @@ nnoremap <backspace> <C-U>
 nnoremap 11 :w<enter>
 nnoremap 22 :wq<enter>
 nnoremap 33 :q<enter>
+nnoremap 44 :q!<enter>
 nnoremap ö )
 nnoremap ä (
 nnoremap Ö }
