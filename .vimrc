@@ -85,6 +85,7 @@ nnoremap ö )
 nnoremap ä (
 nnoremap Ö }
 nnoremap Ä {
+nnoremap m i<space><esc>
 "
 inoremap <leader>< <><esc>i
 "iab mfg <cr><cr>Mit freundlichen Grüßen<cr><cr>Andreas Kamzol<esc> "use
