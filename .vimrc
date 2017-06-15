@@ -93,13 +93,23 @@ iab asciicat (>^.^<)
 "
 vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
 vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+"search and replace selected text
 "
 "-------------------
 " F U N C T I O N S 
 "-------------------
 "
-"so ~/.vim/functions/tagselection.vim
+so ~/.vim/functions/tagselection.vim
+"so ~/.vim/functions/xmlprettyprint.vim
 
+"
+"---------
+" K E Y S 
+"---------
+"gu = lowercase
+"gU = uppercase
+"g~ = toggle case
 "
 "---------
 " H E L P 
