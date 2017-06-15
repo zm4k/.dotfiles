@@ -77,10 +77,11 @@ set expandtab "cause TAB characters to not be used in the file for compression, 
 "
 nnoremap <space> <C-D>
 nnoremap <backspace> <C-U>
-nnoremap 11 :w<enter>
-nnoremap 22 :wq<enter>
-nnoremap 33 :q<enter>
-nnoremap 44 :q!<enter>
+nnoremap 1 :w<enter>
+nnoremap 2 :wq<enter>
+nnoremap 3 :q<enter>
+nnoremap 4 :q!<enter>
+nnoremap 5 ::%!xmllint --format %<enter>
 nnoremap ö )
 nnoremap ä (
 nnoremap Ö }
