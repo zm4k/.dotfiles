@@ -63,25 +63,26 @@ set showbreak=++++
 set cursorline
 "set scrolloff=0 "line follows always the cursor
 set scrolloff=999 "number of context lines you would like to see above and below the cursor
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set list "Display all Tabs and Ends of lines (Dislays these hidden characters)
 set tabstop=4
 set softtabstop=4 " makes the spaces feel like real tabs
 set shiftwidth=4
 "set noexpandtab
 set expandtab "cause TAB characters to not be used in the file for compression, and for only spaces to be used
-"
+set hidden "allow hidden buffers, no need for adding a !
+"jfkdlj
 "-------------------------
 " K E Y   M A P P I N G S 
 "-------------------------
 "
 nnoremap <space> <C-D>
 nnoremap <backspace> <C-U>
-nnoremap 1 :w<enter>
-nnoremap 2 :wq<enter>
-nnoremap 3 :q<enter>
-nnoremap 4 :q!<enter>
-nnoremap 5 ::%!xmllint --format %<enter>
+nnoremap 11 :w<enter>
+nnoremap 22 :wq<enter>
+nnoremap 33 :q<enter>
+nnoremap 44 :q!<enter>
+nnoremap 55 ::%!xmllint --format %<enter>
 nnoremap ö )
 nnoremap ä (
 nnoremap Ö }
@@ -105,7 +106,14 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "
 so ~/.vim/functions/tagselection.vim
 "so ~/.vim/functions/xmlprettyprint.vim
-
+"
+"---------------
+" A U T O C M D 
+"---------------
+"
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
 "
 "---------
 " K E Y S 
