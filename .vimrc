@@ -44,6 +44,7 @@ filetype plugin on "to ignore plugin indent changes
 "let g:solarized_termcolors=256
 syntax enable
 set background=dark
+"colorscheme grb256
 colorscheme delek
 set wrap
 "colorscheme solarized
@@ -71,7 +72,7 @@ set shiftwidth=4
 "set noexpandtab
 set expandtab "cause TAB characters to not be used in the file for compression, and for only spaces to be used
 set hidden "allow hidden buffers, no need for adding a !
-"jfkdlj
+"
 "-------------------------
 " K E Y   M A P P I N G S 
 "-------------------------
