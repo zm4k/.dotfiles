@@ -57,7 +57,8 @@ set autoindent "set paste to disable
 set nostartofline
 set ruler
 set visualbell
-set number
+"set number
+set relativenumber
 set showmatch
 set linebreak
 set showbreak=++++
@@ -105,7 +106,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " F U N C T I O N S 
 "-------------------
 "
-so ~/.vim/functions/tagselection.vim
+"so ~/.vim/functions/tagselection.vim
 "so ~/.vim/functions/xmlprettyprint.vim
 "
 "---------------
