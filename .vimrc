@@ -46,6 +46,8 @@ syntax enable
 set background=dark
 "colorscheme grb256
 colorscheme delek
+set ff=unix
+"set ff=dos
 set wrap
 "colorscheme solarized
 set wildmenu
@@ -57,14 +59,14 @@ set autoindent "set paste to disable
 set nostartofline
 set ruler
 set visualbell
-"set number
-set relativenumber
+set number
+"set relativenumber
 set showmatch
 set linebreak
 set showbreak=++++
 set cursorline
 "set scrolloff=0 "line follows always the cursor
-set scrolloff=999 "number of context lines you would like to see above and below the cursor
+set scrolloff=40 "number of context lines you would like to see above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set list "Display all Tabs and Ends of lines (Dislays these hidden characters)
 set tabstop=4
@@ -113,9 +115,9 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " A U T O C M D 
 "---------------
 "
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
+"if has("autocmd")
+  "autocmd bufwritepost .vimrc source $MYVIMRC
+"endif
 "
 "---------
 " K E Y S 
