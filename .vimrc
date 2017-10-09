@@ -1,8 +1,8 @@
-" P L U G I N S //////////////////////////////////////////////////////////////////////////
+" P L U G I N S ////////////////////////////////////////////////////////////////
 "--Vundle--
 set nocompatible "required
 filetype off "required
-set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path for Vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
 "
@@ -30,7 +30,7 @@ call vundle#end() "required
 filetype plugin indent on "required
 filetype plugin on "to ignore plugin indent changes
 "
-" G E N E R A L //////////////////////////////////////////////////////////////////////////
+" G E N E R A L ////////////////////////////////////////////////////////////////
 "let g:solarized_termcolors=256
 syntax enable
 "set background=dark
@@ -53,7 +53,7 @@ set visualbell
 set showmatch
 set cursorline
 "set scrolloff=0 "line follows always the cursor
-set scrolloff=40 "number of context lines you would like to see above and below the cursor
+"set scrolloff=40 "number of context lines you would like to see above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set list "Display all Tabs and Ends of lines (Dislays these hidden characters)
 set tabstop=4
@@ -63,7 +63,7 @@ set shiftwidth=4
 set expandtab "cause TAB characters to not be used in the file for compression, and for only spaces to be used
 set hidden "allow hidden buffers, no need for adding a !
 set pastetoggle=<F2> "toggles paste mode
-set textwidth=90
+set textwidth=80
 set encoding=utf-8
 set lazyredraw
 set number
@@ -71,7 +71,7 @@ set nowrap
 set nolinebreak
 "set showbreak=++++
 "
-" K E Y   M A P P I N G S //////////////////////////////////////////////////////////////// 
+" K E Y   M A P P I N G S //////////////////////////////////////////////////////
 nnoremap <space> <C-D>
 nnoremap <backspace> <C-U>
 nnoremap 11 :w<enter>
@@ -89,8 +89,6 @@ nnoremap m i<space><esc>
 inoremap <leader>< <><esc>i
 inoremap < <><esc>i
 inoremap ( ()<esc>i
-"iab mfg <cr><cr>Mit freundlichen Grüßen<cr><cr>Andreas Kamzol<esc> "use
-"ultisnips instead
 iab pdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr><cr>
 "insert the present date
 iab asciicat (>^.^<)
@@ -100,22 +98,22 @@ vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "search and replace selected text
 "
-" F U N C T I O N S //////////////////////////////////////////////////////////////////////
+" F U N C T I O N S ////////////////////////////////////////////////////////////
 "so ~/.vim/functions/tagselection.vim
 "so ~/.vim/functions/xmlprettyprint.vim
 "
-" A U T O C M D //////////////////////////////////////////////////////////////////////////
+" A U T O C M D ////////////////////////////////////////////////////////////////
 "if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
 "endif
 "
-" K E Y S" ///////////////////////////////////////////////////////////////////////////////
+" K E Y S" /////////////////////////////////////////////////////////////////////
 "gu = lowercase
 "gU = uppercase
 "g~ = toggle case
 "gggqG = reformat file
 "
-" H E L P ////////////////////////////////////////////////////////////////////////////////
+" H E L P //////////////////////////////////////////////////////////////////////
 "--Vundle--
 " Brief help
 " :PluginList       - lists configured plugins
