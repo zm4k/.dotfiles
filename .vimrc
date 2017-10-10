@@ -22,23 +22,14 @@ let g:UltiSnipsSnippetDirectories="~/.vim/bundle/ultisnips/"
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDCreateDefaultMappings = 1
 let mapleader = ","
-"
-"--Disabled Plugins--
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'html-xml-tag-matcher'
 call vundle#end() "required
 filetype plugin indent on "required
 filetype plugin on "to ignore plugin indent changes
 "
 " G E N E R A L ////////////////////////////////////////////////////////////////
-"let g:solarized_termcolors=256
 syntax enable
-"set background=dark
-"colorscheme grb256
 colorscheme delek
-"colorscheme solarized
-set ff=unix
-"set ff=dos
+set ff=unix "set ff=dos
 set wildmenu
 set showcmd
 set hlsearch
@@ -49,27 +40,24 @@ set autoindent "set paste to disable
 set nostartofline
 set ruler
 set visualbell
-"set relativenumber
 set showmatch
 set cursorline
 "set scrolloff=0 "line follows always the cursor
-"set scrolloff=40 "number of context lines you would like to see above and below the cursor
+"set scrolloff=40 "number of context lines above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
-set list "Display all Tabs and Ends of lines (Dislays these hidden characters)
+set list "display all tabs and ends of lines
 set tabstop=4
-set softtabstop=4 " makes the spaces feel like real tabs
+set softtabstop=4 "makes the spaces feel like real tabs
 set shiftwidth=4
-"set noexpandtab
-set expandtab "cause TAB characters to not be used in the file for compression, and for only spaces to be used
+set expandtab "cause TAB characters to not be used "set noexpandtab
 set hidden "allow hidden buffers, no need for adding a !
 set pastetoggle=<F2> "toggles paste mode
 set textwidth=80
 set encoding=utf-8
 set lazyredraw
-set number
+set number "set relativenumber
 set nowrap
 set nolinebreak
-"set showbreak=++++
 "
 " K E Y   M A P P I N G S //////////////////////////////////////////////////////
 nnoremap <space> <C-D>
@@ -85,6 +73,7 @@ nnoremap ü /
 nnoremap Ö }
 nnoremap Ä {
 nnoremap m i<space><esc>
+nnoremap ß <C-O> "jump to previous line
 "
 inoremap <leader>< <><esc>i
 inoremap < <><esc>i
@@ -143,3 +132,14 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "
 "--General--
 "set expandtab "insert space characters whenever the tab key is pressed, if you want to enter a real tab character use Ctrl-V<Tab>, use :retab to change all the existing tab characters to match the current tab settings
+"
+"deleted
+"let g:solarized_termcolors=256
+"set background=dark
+"colorscheme grb256
+"colorscheme solarized
+"
+"--Disabled Plugins--
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'html-xml-tag-matcher'
+"set showbreak=++++
