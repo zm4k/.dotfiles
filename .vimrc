@@ -29,6 +29,7 @@ filetype plugin on "to ignore plugin indent changes
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
 colorscheme delek
+set encoding=utf-8
 set ff=unix "set ff=dos
 set wildmenu
 set showcmd
@@ -42,8 +43,7 @@ set ruler
 set visualbell
 set showmatch
 set cursorline
-"set scrolloff=0 "line follows always the cursor
-"set scrolloff=40 "number of context lines above and below the cursor
+set scrolloff=40 "number of context lines above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set list "display all tabs and ends of lines
 set tabstop=4
@@ -53,11 +53,8 @@ set expandtab "cause TAB characters to not be used "set noexpandtab
 set hidden "allow hidden buffers, no need for adding a !
 set pastetoggle=<F2> "toggles paste mode
 set textwidth=80
-set encoding=utf-8
 set lazyredraw
 set number "set relativenumber
-set nowrap
-set nolinebreak
 "
 " K E Y   M A P P I N G S //////////////////////////////////////////////////////
 nnoremap <space> <C-D>
@@ -79,19 +76,23 @@ inoremap <leader>< <><esc>i
 inoremap < <><esc>i
 inoremap ( ()<esc>i
 iab pdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr><cr>
-"insert the present date
 iab asciicat (>^.^<)
 "
 vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
 vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-"search and replace selected text
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left> 
 "
 " F U N C T I O N S ////////////////////////////////////////////////////////////
 "so ~/.vim/functions/tagselection.vim
 "so ~/.vim/functions/xmlprettyprint.vim
 "
 " A U T O C M D ////////////////////////////////////////////////////////////////
+"augroup VCenterCursor "disable: au! VCenterCursor
+  "au!
+  "au BufEnter,WinEnter,WinNew,VimResized *,*.*
+        "\ let &scrolloff=winheight(win_getid())/2
+"augroup END
+
 "if has("autocmd")
   "autocmd bufwritepost .vimrc source $MYVIMRC
 "endif
@@ -106,9 +107,10 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "--Vundle--
 " Brief help
 " :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginInstall    - installs plugins; append `!` to update or :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PluginClean      - confirms removal of unused plugins; 
+"                     append `!` to auto-approve removal
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this lin
 "
@@ -131,7 +133,9 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 "
 "--General--
-"set expandtab "insert space characters whenever the tab key is pressed, if you want to enter a real tab character use Ctrl-V<Tab>, use :retab to change all the existing tab characters to match the current tab settings
+"set expandtab "insert space characters whenever the tab key is pressed, if you
+"want to enter a real tab character use Ctrl-V<Tab>, use :retab to change all
+"the existing tab characters to match the current tab settings
 "
 "deleted
 "let g:solarized_termcolors=256
@@ -143,3 +147,6 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'html-xml-tag-matcher'
 "set showbreak=++++
+"set scrolloff=0 "line follows always the cursor
+"set nowrap
+"set nolinebreak
