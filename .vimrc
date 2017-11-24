@@ -5,6 +5,7 @@ filetype off "required
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path for Vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
+set shell="/usr/bin/sh"
 "
 "--UltiSnips--
 Plugin 'SirVer/ultisnips' "UltiSnip engine
@@ -14,9 +15,9 @@ let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetsDir="~/.vim/bundle/ultisnips/"
-let g:UltiSnipsSnippetDirectories="~/.vim/bundle/ultisnips/"
+let g:UltiSnipsEditSplit="horizontal"
+let g:UltiSnipsSnippetsDir="~/.vim/bundle/ultisnips/" "user snippets
+let g:UltiSnipsSnippetDirectories="~/.vim/bundle/vim-snippets/UltiSnips/"
 "
 "--NerdCommenter--
 Plugin 'scrooloose/nerdcommenter'
@@ -42,7 +43,7 @@ set nostartofline
 set ruler
 set visualbell
 set showmatch
-set cursorline
+"set cursorline
 set scrolloff=40 "number of context lines above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set list "display all tabs and ends of lines
@@ -72,9 +73,9 @@ nnoremap Ä {
 nnoremap m i<space><esc>
 nnoremap ß <C-O> "jump to previous line
 "
-inoremap <leader>< <><esc>i
-inoremap < <><esc>i
-inoremap ( ()<esc>i
+"inoremap <leader>< <><esc>i
+"inoremap < <><esc>i
+"inoremap ( ()<esc>i
 iab pdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr><cr>
 iab asciicat (>^.^<)
 "
@@ -99,7 +100,17 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 "
 " K E Y S" /////////////////////////////////////////////////////////////////////
 "gu = lowercase
-"gU = uppercase
+"gU = uppergfgfg
+"
+"
+"gf
+"gfgfgfg gfgggggggggg gf
+"gfgfg
+"
+"
+"gf
+"gfgfgfg gfgggggggggg gf
+"case
 "g~ = toggle case
 "gggqG = reformat file
 "
