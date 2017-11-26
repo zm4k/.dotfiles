@@ -5,7 +5,7 @@ filetype off "required
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path for Vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
-set shell="/usr/bin/sh"
+"set shell="/usr/bin/bash"
 "
 "--UltiSnips--
 Plugin 'SirVer/ultisnips' "UltiSnip engine
@@ -29,7 +29,8 @@ filetype plugin on "to ignore plugin indent changes
 "
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
-colorscheme delek
+colorscheme jellybeans
+"colorscheme delek
 set encoding=utf-8
 set ff=unix "set ff=dos
 set wildmenu
