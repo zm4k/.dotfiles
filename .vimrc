@@ -63,6 +63,7 @@ set number "set relativenumber
 " K E Y   M A P P I N G S //////////////////////////////////////////////////////
 nnoremap <space> <C-D>
 nnoremap <backspace> <C-U>
+nnoremap <silent> <C-l> :nohlsearch <bar> redraw<CR>
 nnoremap 11 :w<enter>
 nnoremap 22 :wq<enter>
 nnoremap 33 :q<enter>
@@ -80,6 +81,7 @@ nnoremap ß <C-O> "jump to previous line
 "inoremap < <><esc>i
 "inoremap ( ()<esc>i
 iab pdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr><cr>
+iab idate <c-r>=strftime("%d/%m/%y %H:%M:%S")
 iab asciicat (>^.^<)
 "
 vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
