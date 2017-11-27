@@ -29,7 +29,8 @@ filetype plugin on "to ignore plugin indent changes
 "
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
-colorscheme jellybeans
+"colorscheme jellybeans
+colorscheme distinguished
 "colorscheme delek
 set encoding=utf-8
 set ff=unix "set ff=dos
@@ -47,6 +48,7 @@ set showmatch
 "set cursorline
 set scrolloff=40 "number of context lines above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
+set matchpairs=(:),{:},[:],<:>
 set list "display all tabs and ends of lines
 set tabstop=4
 set softtabstop=4 "makes the spaces feel like real tabs
