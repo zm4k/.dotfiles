@@ -30,8 +30,8 @@ filetype plugin on "to ignore plugin indent changes
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
 "colorscheme jellybeans
-colorscheme distinguished
-"colorscheme delek
+"colorscheme distinguished
+colorscheme delek
 set encoding=utf-8
 set ff=unix "set ff=dos
 set wildmenu
@@ -103,18 +103,10 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
   "autocmd bufwritepost .vimrc source $MYVIMRC
 "endif
 "
-" K E Y S" /////////////////////////////////////////////////////////////////////
-"gu = lowercase
-"gU = uppergfgfg
-"
-"
-"gf
-"gfgfgfg gfgggggggggg gf
-"gfgfg
-"
-"
-"gf
-"gfgfgfg gfgggggggggg gf
+
+
+"--------------------
+
 "case
 "g~ = toggle case
 "gggqG = reformat file
@@ -148,10 +140,6 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 " different version somewhere else.
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 "
-"--General--
-"set expandtab "insert space characters whenever the tab key is pressed, if you
-"want to enter a real tab character use Ctrl-V<Tab>, use :retab to change all
-"the existing tab characters to match the current tab settings
 "
 "deleted
 "let g:solarized_termcolors=256
