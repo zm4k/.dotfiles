@@ -75,82 +75,16 @@ nnoremap ü /
 nnoremap Ö }
 nnoremap Ä {
 nnoremap m i<space><esc>
-nnoremap ß <C-O> "jump to previous line
+nnoremap ß <C-O>
 "
-"inoremap <leader>< <><esc>i
-"inoremap < <><esc>i
-"inoremap ( ()<esc>i
+inoremap < <><esc>i
+inoremap ( ()<esc>i
+inoremap { {}<esc>i
+inoremap [ []<esc>i
 iab pdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr><cr>
 iab idate <c-r>=strftime("%d/%m/%y %H:%M:%S")
 iab asciicat (>^.^<)
 "
 vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
 vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left> 
-"
-" F U N C T I O N S ////////////////////////////////////////////////////////////
-"so ~/.vim/functions/tagselection.vim
-"so ~/.vim/functions/xmlprettyprint.vim
-"
-" A U T O C M D ////////////////////////////////////////////////////////////////
-"augroup VCenterCursor "disable: au! VCenterCursor
-  "au!
-  "au BufEnter,WinEnter,WinNew,VimResized *,*.*
-        "\ let &scrolloff=winheight(win_getid())/2
-"augroup END
-
-"if has("autocmd")
-  "autocmd bufwritepost .vimrc source $MYVIMRC
-"endif
-"
-
-
-"--------------------
-
-"case
-"g~ = toggle case
-"gggqG = reformat file
-"
-" H E L P //////////////////////////////////////////////////////////////////////
-"--Vundle--
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; 
-"                     append `!` to auto-approve removal
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this lin
-"
-"--UltiSnips
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-"Plugin 'ascenator/L9', {'name': 'newL9'}
-"
-"
-"deleted
-"let g:solarized_termcolors=256
-"set background=dark
-"colorscheme grb256
-"colorscheme solarized
-"
-"--Disabled Plugins--
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'html-xml-tag-matcher'
-"set showbreak=++++
-"set scrolloff=0 "line follows always the cursor
-"set nowrap
-"set nolinebreak
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>>
