@@ -69,13 +69,14 @@ nnoremap 22 :wq<enter>
 nnoremap 33 :q<enter>
 nnoremap 44 :q!<enter>
 nnoremap 55 ::%!xmllint --format %<enter>
-nnoremap ö (
-nnoremap ä )
-nnoremap ü /
-nnoremap Ö }
+nnoremap ä (
+nnoremap ü )
 nnoremap Ä {
+nnoremap Ü }
+nnoremap Ö /
+nnoremap - :
 nnoremap m i<space><esc>
-nnoremap ß <C-O>
+"nnoremap ß <C-O>
 "
 inoremap < <><esc>i
 inoremap ( ()<esc>i
