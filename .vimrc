@@ -58,7 +58,7 @@ set hidden "allow hidden buffers, no need for adding a !
 set pastetoggle=<F2> "toggles paste mode
 set textwidth=80
 set lazyredraw
-set number "set relativenumber
+"set number "set relativenumber
 "
 " K E Y   M A P P I N G S //////////////////////////////////////////////////////
 nnoremap <space> <C-D>
@@ -88,4 +88,4 @@ iab asciicat (>^.^<)
 "
 vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
 vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>>
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
