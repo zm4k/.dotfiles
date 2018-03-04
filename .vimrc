@@ -8,16 +8,16 @@ Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
 "set shell="/usr/bin/bash"
 "
 "--UltiSnips--
-Plugin 'SirVer/ultisnips' "UltiSnip engine
-Plugin 'honza/vim-snippets' "handles the actual snippets
-set rtp+=~/.vim/bundle/ultisnips/
-let g:UltiSnipsUsePythonVersion = 2
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="horizontal"
-let g:UltiSnipsSnippetsDir="~/.vim/bundle/ultisnips/" "user snippets
-let g:UltiSnipsSnippetDirectories="~/.vim/bundle/vim-snippets/UltiSnips/"
+"Plugin 'SirVer/ultisnips' "UltiSnip engine
+"Plugin 'honza/vim-snippets' "handles the actual snippets
+"set rtp+=~/.vim/bundle/ultisnips/
+"let g:UltiSnipsUsePythonVersion = 2
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsEditSplit="horizontal"
+"let g:UltiSnipsSnippetsDir="~/.vim/bundle/ultisnips/" "user snippets
+"let g:UltiSnipsSnippetDirectories="~/.vim/bundle/vim-snippets/UltiSnips/"
 "
 "--NerdCommenter--
 Plugin 'scrooloose/nerdcommenter'
