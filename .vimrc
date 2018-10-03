@@ -30,8 +30,8 @@ filetype plugin on "to ignore plugin indent changes
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
 "colorscheme jellybeans
-colorscheme distinguished
-"colorscheme delek
+"colorscheme distinguished
+colorscheme delek
 set encoding=utf-8
 set ff=unix "set ff=dos
 set wildmenu
