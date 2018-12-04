@@ -36,9 +36,6 @@ set encoding=utf-8
 set ff=unix "set ff=dos
 set wildmenu
 set showcmd
-set hlsearch
-set ignorecase
-set incsearch
 set smartcase
 set autoindent "set paste to disable
 set nostartofline
@@ -59,6 +56,14 @@ set pastetoggle=<F2> "toggles paste mode
 set textwidth=80
 set lazyredraw
 "set number "set relativenumber
+"
+" S E A R C H ////////////////////////////////////////////////////////////////
+set hlsearch
+set ignorecase
+set incsearch
+highlight clear Search
+highlight Search ctermfg=Yellow ctermbg=Black cterm=bold
+highlight IncSearch ctermfg=White ctermbg=Red cterm=bold
 "
 " K E Y   M A P P I N G S //////////////////////////////////////////////////////
 nnoremap <space> <C-D>
