@@ -2,9 +2,9 @@
 "--Vundle--
 set nocompatible "required
 filetype off "required
-set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path for Vundle
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
+"set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path for Vundle
+"call vundle#begin()
+"Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
 "set shell="/usr/bin/bash"
 "
 "--UltiSnips--
@@ -20,12 +20,12 @@ Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
 "let g:UltiSnipsSnippetDirectories="~/.vim/bundle/vim-snippets/UltiSnips/"
 "
 "--NerdCommenter--
-Plugin 'scrooloose/nerdcommenter'
-let g:NERDCreateDefaultMappings = 1
-let mapleader = ","
-call vundle#end() "required
-filetype plugin indent on "required
-filetype plugin on "to ignore plugin indent changes
+"Plugin 'scrooloose/nerdcommenter'
+"let g:NERDCreateDefaultMappings = 1
+"let mapleader = ","
+"call vundle#end() "required
+"filetype plugin indent on "required
+"filetype plugin on "to ignore plugin indent changes
 "
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
