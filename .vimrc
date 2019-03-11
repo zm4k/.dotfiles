@@ -1,12 +1,11 @@
 " P L U G I N S ////////////////////////////////////////////////////////////////
-"--Vundle--
+"--Vundle.vim--
 set nocompatible "required
 filetype off "required
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path for Vundle
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim' 
-"let Vundle manage Vundle, required
-"set shell="/usr/bin/bash"
+Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
+set shell=/bin/bash "needed because I'm using the fish shell
 "
 "--UltiSnips--
 Plugin 'SirVer/ultisnips' "UltiSnip engine
@@ -48,15 +47,16 @@ set scrolloff=40 "number of context lines above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set matchpairs=(:),{:},[:],<:>
 set list "display all tabs and ends of lines
-set tabstop=4
-set softtabstop=4 "makes the spaces feel like real tabs
+"set tabstop=4
+"set softtabstop=4 "makes the spaces feel like real tabs
 set shiftwidth=4
 set expandtab "cause TAB characters to not be used "set noexpandtab
 set hidden "allow hidden buffers, no need for adding a !
 set pastetoggle=<F2> "toggles paste mode
 set textwidth=80
 set lazyredraw
-"set number "set relativenumber
+set number 
+"set relativenumber
 "
 " S E A R C H ////////////////////////////////////////////////////////////////
 set hlsearch
@@ -82,12 +82,14 @@ nnoremap Ü }
 nnoremap Ö /
 nnoremap - :
 nnoremap m i<space><esc>
+nnoremap z y
+nnoremap y z
 "nnoremap ß <C-O>
 "
-inoremap < <><esc>i
-inoremap ( ()<esc>i
-inoremap { {}<esc>i
-inoremap [ []<esc>i
+"inoremap < <><esc>i
+"inoremap ( ()<esc>i
+"inoremap { {}<esc>i
+"inoremap [ []<esc>i
 iab pdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr><cr>
 iab idate <c-r>=strftime("%d/%m/%y %H:%M:%S")
 iab asciicat (>^.^<)
@@ -95,3 +97,7 @@ iab asciicat (>^.^<)
 vnoremap <leader>( <esc>`>a)<esc>`<i(<esc>
 vnoremap <leader>< <esc>`>a><esc>`<i<<esc>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+vnoremap <space> <C-D>
+vnoremap <backspace> <C-U>
+vnoremap z y
+vnoremap y z
