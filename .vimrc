@@ -74,7 +74,7 @@ nnoremap 11 :w<enter>
 nnoremap 22 :wq<enter>
 nnoremap 33 :q<enter>
 nnoremap 44 :q!<enter>
-nnoremap 55 ::%!xmllint --format %<enter>
+"nnoremap 55 ::%!xmllint --format %<enter>
 nnoremap ä (
 nnoremap ü )
 nnoremap Ä {
@@ -84,6 +84,7 @@ nnoremap - :
 nnoremap m i<space><esc>
 nnoremap z y
 nnoremap y z
+nnoremap _ /
 "nnoremap ß <C-O>
 "
 "inoremap < <><esc>i
@@ -101,3 +102,4 @@ vnoremap <space> <C-D>
 vnoremap <backspace> <C-U>
 vnoremap z y
 vnoremap y z
+vnoremap _ /
