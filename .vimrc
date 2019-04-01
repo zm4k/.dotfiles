@@ -23,6 +23,10 @@ let g:UltiSnipsSnippetDirectories="~/.vim/bundle/vim-snippets/UltiSnips/"
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDCreateDefaultMappings = 1
 let mapleader = ","
+"
+"--Emmet-Vim--
+Plugin 'mattn/emmet-vim' "<c-y>, to expand the abbreviation
+"
 call vundle#end() "required
 filetype plugin indent on "required
 filetype plugin on "to ignore plugin indent changes
@@ -103,3 +107,7 @@ vnoremap <backspace> <C-U>
 vnoremap z y
 vnoremap y z
 vnoremap _ /
+"
+" F I L E   S P E C I F I C ////////////////////////////////////////////////////
+autocmd BufRead,BufNewFile ~/git/coursera-bootstrap/* setlocal shiftwidth=3 nowrap
+"
