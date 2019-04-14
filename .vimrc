@@ -59,10 +59,12 @@ set hidden "allow hidden buffers, no need for adding a !
 set pastetoggle=<F2> "toggles paste mode
 set textwidth=80
 set lazyredraw
-set number 
-"set relativenumber
+set number
 "
-" S E A R C H ////////////////////////////////////////////////////////////////
+highlight colorcolumn ctermfg=yellow ctermbg=Black cterm=bold
+set colorcolumn=82
+"
+" S E A R C H //////////////////////////////////////////////////////////////////
 set hlsearch
 set ignorecase
 set incsearch
@@ -70,7 +72,7 @@ highlight clear Search
 highlight Search ctermfg=Yellow ctermbg=Black cterm=bold
 highlight IncSearch ctermfg=White ctermbg=Red cterm=bold
 "
-" K E Y   M A P P I N G S //////////////////////////////////////////////////////
+" K E Y   M A P P I N G S /////////////////////////////////////////////////////
 nnoremap <space> <C-D>
 nnoremap <backspace> <C-U>
 nnoremap <silent> <C-l> :nohlsearch <bar> redraw<CR>
@@ -109,5 +111,8 @@ vnoremap y z
 vnoremap _ /
 "
 " F I L E   S P E C I F I C ////////////////////////////////////////////////////
-autocmd BufRead,BufNewFile ~/git/coursera-bootstrap/* setlocal shiftwidth=3 nowrap
-"
+if has("autocmd")
+  "autocmd BufRead,BufNewFile ~/git/coursera-bootstrap/* setlocal sw=3 nowrap
+  autocmd FileType html setlocal shiftwidth=2 nowrap
+  autocmd FileType css setlocal shiftwidth=2 nowrap
+endif
