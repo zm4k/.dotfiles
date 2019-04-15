@@ -1,25 +1,26 @@
-indent: no 
-wrap-attributes: no 
-vertical-space: yes 
-indent-spaces: 2 
-indent-with-tabs: no 
-wrap: 79 
-doctype: omit 
-markup: yes 
-output-html: yes 
-output-xml: no 
-input-xml: no 
-show-warnings: yes 
-numeric-entities: yes 
-quote-marks: yes 
-quote-nbsp: yes 
-quote-ampersand: no 
-break-before-br: no 
-uppercase-tags: no 
-uppercase-attributes: no 
-char-encoding: utf8 
-new-inline-tags: cfif, cfelse, math, mroot, mrow, mi, mn, mo, msqrt, mfrac, msubsup, munderover, munder, mover, mmultiscripts, msup, msub, mtext, mprescripts, mtable, mtr, mtd, mth 
-new-blocklevel-tags: cfoutput, cfquery 
-new-empty-tags: cfelse 
-tidy-mark: yes 
-write-back: yes
+indent: auto
+wrap-attributes: no
+vertical-space: no
+indent-spaces: 2
+indent-with-tabs: no
+wrap: 79
+doctype: omit
+drop-empty-elements: no
+drop-empty-paras: no
+markup: yes
+output-html: yes
+output-xml: no
+input-xml: no
+show-warnings: yes
+numeric-entities: yes
+quote-marks: yes
+quote-nbsp: yes
+quote-ampersand: no
+break-before-br: no
+uppercase-tags: no
+uppercase-attributes: no
+char-encoding: utf8
+new-inline-tags: cfif, cfelse, math, mroot, mrow, mi, mn, mo, msqrt, mfrac, msubsup, munderover, munder, mover, mmultiscripts, msup, msub, mtext, mprescripts, mtable, mtr, mtd, mth
+new-blocklevel-tags: cfoutput, cfquery
+new-empty-tags: cfelse tidy-mark: yes
+write-back: no

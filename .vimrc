@@ -110,6 +110,10 @@ vnoremap z y
 vnoremap y z
 vnoremap _ /
 "
+command Thtml :%!tidy -config ~/.tidy -q --show-errors 0
+command Whtml :%!tidy -config ~/.tidy -q --show-errors 0 --wrap 0
+command Nhtml :%!tidy -config ~/.tidy -q --show-errors 0 --wrap 0 --indent 0
+"
 " F I L E   S P E C I F I C ////////////////////////////////////////////////////
 if has("autocmd")
   "autocmd BufRead,BufNewFile ~/git/coursera-bootstrap/* setlocal sw=3 nowrap
