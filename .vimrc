@@ -92,6 +92,9 @@ nnoremap z y
 nnoremap y z
 nnoremap _ /
 "nnoremap ß <C-O>
+nnoremap <Leader>b :ls<CR>:b<Space>
+nnoremap <C-J> :bnext<CR>
+nnoremap <C-K> :bprev<CR>
 "
 "inoremap < <><esc>i
 "inoremap ( ()<esc>i
@@ -110,9 +113,9 @@ vnoremap z y
 vnoremap y z
 vnoremap _ /
 "
-command Thtml :%!tidy -config ~/.tidy -q --show-errors 0
-command Whtml :%!tidy -config ~/.tidy -q --show-errors 0 --wrap 0
-command Nhtml :%!tidy -config ~/.tidy -q --show-errors 0 --wrap 0 --indent 0
+command Thtml :%!tidy -config ~/.tidy -q 
+command Whtml :%!tidy -config ~/.tidy -q --wrap 0
+command Nhtml :%!tidy -config ~/.tidy -q --wrap 0 --indent 0
 "
 " F I L E   S P E C I F I C ////////////////////////////////////////////////////
 if has("autocmd")
