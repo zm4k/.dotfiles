@@ -42,6 +42,7 @@ set wildmenu
 set showcmd
 set smartcase
 set autoindent "set paste to disable
+"set autoread
 set nostartofline
 set ruler
 set visualbell
@@ -51,8 +52,8 @@ set scrolloff=40 "number of context lines above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set matchpairs=(:),{:},[:],<:>
 set list "display all tabs and ends of lines
-"set tabstop=4
-"set softtabstop=4 "makes the spaces feel like real tabs
+set tabstop=4
+set softtabstop=4 "makes the spaces feel like real tabs
 set shiftwidth=4
 set expandtab "cause TAB characters to not be used "set noexpandtab
 set hidden "allow hidden buffers, no need for adding a !
@@ -122,4 +123,5 @@ if has("autocmd")
   "autocmd BufRead,BufNewFile ~/git/coursera-bootstrap/* setlocal sw=3 nowrap
   autocmd FileType html setlocal shiftwidth=2 nowrap
   autocmd FileType css setlocal shiftwidth=2 nowrap
+  autocmd FileType less setlocal shiftwidth=2 nowrap
 endif
