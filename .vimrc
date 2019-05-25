@@ -31,6 +31,12 @@ call vundle#end() "required
 filetype plugin indent on "required
 filetype plugin on "to ignore plugin indent changes
 "
+"--Vim-Javascript--"
+Plugin 'pangloss/vim-javascript'
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+"
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
 "colorscheme jellybeans
@@ -124,4 +130,5 @@ if has("autocmd")
   autocmd FileType html setlocal shiftwidth=2 nowrap
   autocmd FileType css setlocal shiftwidth=2 nowrap
   autocmd FileType less setlocal shiftwidth=2 nowrap
+  autocmd FileType scss setlocal shiftwidth=2 nowrap
 endif
