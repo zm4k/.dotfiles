@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path for Vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
 set shell=/bin/bash "needed because I'm using the fish shell
+"run :PluginInstall
 "
 "--UltiSnips--
 Plugin 'SirVer/ultisnips' "UltiSnip engine
@@ -52,6 +53,7 @@ set wildmenu
 set showcmd
 set smartcase
 set autoindent "set paste to disable
+"set autoread
 set nostartofline
 set ruler
 set visualbell
@@ -61,8 +63,8 @@ set scrolloff=40 "number of context lines above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set matchpairs=(:),{:},[:],<:>
 set list "display all tabs and ends of lines
-"set tabstop=4
-"set softtabstop=4 "makes the spaces feel like real tabs
+set tabstop=4
+set softtabstop=4 "makes the spaces feel like real tabs
 set shiftwidth=4
 set expandtab "cause TAB characters to not be used "set noexpandtab
 set hidden "allow hidden buffers, no need for adding a !
@@ -105,6 +107,9 @@ nnoremap _ /
 nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <C-J> :bnext<CR>
 nnoremap <C-K> :bprev<CR>
+
+nnoremap <silent> <leader>e4 :e $MYVIMRC<CR>
+nnoremap <silent> <leader>s4 :source $MYVIMRC<CR>
 "
 nnoremap <silent> <leader>e4 :e $MYVIMRC<CR>
 nnoremap <silent> <leader>s4 :source $MYVIMRC<CR>
@@ -135,4 +140,6 @@ if has("autocmd")
   "autocmd BufRead,BufNewFile ~/git/coursera-bootstrap/* setlocal sw=3 nowrap
   autocmd FileType html setlocal shiftwidth=2 nowrap
   autocmd FileType css setlocal shiftwidth=2 nowrap
+  autocmd FileType less setlocal shiftwidth=2 nowrap
+  autocmd FileType scss setlocal shiftwidth=2 nowrap
 endif
