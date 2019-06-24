@@ -11,7 +11,7 @@ set shell=/bin/bash "needed because I'm using the fish shell
 Plugin 'SirVer/ultisnips' "UltiSnip engine
 Plugin 'honza/vim-snippets' "handles the actual snippets
 set rtp+=~/.vim/bundle/ultisnips/
-let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -31,11 +31,21 @@ call vundle#end() "required
 filetype plugin indent on "required
 filetype plugin on "to ignore plugin indent changes
 "
+"--Vim-Javascript--
+Plugin 'pangloss/vim-javascript'
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+let g:javascript_plugin_flow = 1
+"
+"--Fugitive--"
+Plugin 'tpope/vim-fugitive'
+"
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
 "colorscheme jellybeans
 "colorscheme distinguished
-colorscheme delek
+"colorscheme delek
+colorscheme zellner
 set encoding=utf-8
 set ff=unix "set ff=dos
 set wildmenu
@@ -61,7 +71,7 @@ set textwidth=80
 set lazyredraw
 set number
 "
-highlight colorcolumn ctermfg=yellow ctermbg=Black cterm=bold
+highlight colorcolumn ctermfg=black ctermbg=NONE cterm=bold
 set colorcolumn=82
 "
 " S E A R C H //////////////////////////////////////////////////////////////////
@@ -96,6 +106,9 @@ nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <C-J> :bnext<CR>
 nnoremap <C-K> :bprev<CR>
 "
+nnoremap <silent> <leader>e4 :e $MYVIMRC<CR>
+nnoremap <silent> <leader>s4 :source $MYVIMRC<CR>
+"
 "inoremap < <><esc>i
 "inoremap ( ()<esc>i
 "inoremap { {}<esc>i
@@ -113,9 +126,9 @@ vnoremap z y
 vnoremap y z
 vnoremap _ /
 "
-command Thtml :%!tidy -config ~/.tidy -q 
-command Whtml :%!tidy -config ~/.tidy -q --wrap 0
-command Nhtml :%!tidy -config ~/.tidy -q --wrap 0 --indent 0
+command! Thtml :%!tidy -config ~/.tidy -q 
+command! Whtml :%!tidy -config ~/.tidy -q --wrap 0
+command! Nhtml :%!tidy -config ~/.tidy -q --wrap 0 --indent 0
 "
 " F I L E   S P E C I F I C ////////////////////////////////////////////////////
 if has("autocmd")
