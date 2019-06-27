@@ -23,6 +23,7 @@ let g:UltiSnipsSnippetDirectories="~/.vim/bundle/vim-snippets/UltiSnips/"
 "--NerdCommenter--
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDCreateDefaultMappings = 1
+
 let mapleader = ","
 "
 "--Emmet-Vim--
@@ -43,10 +44,10 @@ Plugin 'tpope/vim-fugitive'
 "
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
+colorscheme delek
 "colorscheme jellybeans
 "colorscheme distinguished
-"colorscheme delek
-colorscheme zellner
+"colorscheme zellner
 set encoding=utf-8
 set ff=unix "set ff=dos
 set wildmenu
