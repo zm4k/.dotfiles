@@ -95,6 +95,7 @@ nnoremap 33 :q<enter>
 nnoremap 44 :q!<enter>
 "nnoremap 55 ::%!xmllint --format %<enter>
 nnoremap ä (
+nnoremap ö /
 nnoremap ü )
 nnoremap Ä {
 nnoremap Ü }
