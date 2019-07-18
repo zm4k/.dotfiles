@@ -97,12 +97,13 @@ nnoremap ä (
 nnoremap ü )
 nnoremap Ä {
 nnoremap Ü }
-nnoremap Ö /
+nnoremap ö /
 nnoremap - :
 nnoremap m i<space><esc>
 nnoremap z y
 nnoremap y z
 nnoremap _ /
+nnoremap ff :w<enter>
 "nnoremap ß <C-O>
 nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <C-J> :bnext<CR>
