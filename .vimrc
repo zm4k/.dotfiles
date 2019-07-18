@@ -12,7 +12,7 @@ set shell=/bin/bash "needed because I'm using the fish shell
 Plugin 'SirVer/ultisnips' "UltiSnip engine
 Plugin 'honza/vim-snippets' "handles the actual snippets
 set rtp+=~/.vim/bundle/ultisnips/
-let g:UltiSnipsUsePythonVersion = 3
+let g:UltiSnipsUsePythonVersion = 2
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -23,6 +23,7 @@ let g:UltiSnipsSnippetDirectories="~/.vim/bundle/vim-snippets/UltiSnips/"
 "--NerdCommenter--
 Plugin 'scrooloose/nerdcommenter'
 let g:NERDCreateDefaultMappings = 1
+
 let mapleader = ","
 "
 "--Emmet-Vim--
@@ -32,7 +33,7 @@ call vundle#end() "required
 filetype plugin indent on "required
 filetype plugin on "to ignore plugin indent changes
 "
-"--Vim-Javascript--"
+"--Vim-Javascript--
 Plugin 'pangloss/vim-javascript'
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
@@ -40,13 +41,13 @@ let g:javascript_plugin_flow = 1
 "
 "--Fugitive--"
 Plugin 'tpope/vim-fugitive'
-
 "
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
+colorscheme delek
 "colorscheme jellybeans
 "colorscheme distinguished
-colorscheme delek
+"colorscheme zellner
 set encoding=utf-8
 set ff=unix "set ff=dos
 set wildmenu
@@ -73,7 +74,7 @@ set textwidth=80
 set lazyredraw
 set number
 "
-highlight colorcolumn ctermfg=yellow ctermbg=Black cterm=bold
+highlight colorcolumn ctermfg=black ctermbg=NONE cterm=bold
 set colorcolumn=82
 "
 " S E A R C H //////////////////////////////////////////////////////////////////
@@ -94,6 +95,7 @@ nnoremap 33 :q<enter>
 nnoremap 44 :q!<enter>
 "nnoremap 55 ::%!xmllint --format %<enter>
 nnoremap ä (
+nnoremap ö /
 nnoremap ü )
 nnoremap Ä {
 nnoremap Ü }
@@ -109,6 +111,9 @@ nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <C-J> :bnext<CR>
 nnoremap <C-K> :bprev<CR>
 
+nnoremap <silent> <leader>e4 :e $MYVIMRC<CR>
+nnoremap <silent> <leader>s4 :source $MYVIMRC<CR>
+"
 nnoremap <silent> <leader>e4 :e $MYVIMRC<CR>
 nnoremap <silent> <leader>s4 :source $MYVIMRC<CR>
 "
