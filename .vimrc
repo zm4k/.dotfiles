@@ -12,7 +12,7 @@ set shell=/bin/bash "needed because I'm using the fish shell
 Plugin 'SirVer/ultisnips' "UltiSnip engine
 Plugin 'honza/vim-snippets' "handles the actual snippets
 set rtp+=~/.vim/bundle/ultisnips/
-let g:UltiSnipsUsePythonVersion = 2
+let g:UltiSnipsUsePythonVersion = 3
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
