@@ -5,7 +5,8 @@ filetype off "required
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path for Vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
-set shell=/bin/bash "needed because I'm using the fish shell
+"set shell=/bin/bash "needed because I'm using the fish shell
+set shell=/usr/bin/fish "needed because I'm using the fish shell
 "run :PluginInstall
 "
 "--UltiSnips--
@@ -64,9 +65,9 @@ set scrolloff=40 "number of context lines above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set matchpairs=(:),{:},[:],<:>
 set list "display all tabs and ends of lines
-set tabstop=4
-set softtabstop=4 "makes the spaces feel like real tabs
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2 "makes the spaces feel like real tabs
+set shiftwidth=2
 set expandtab "cause TAB characters to not be used "set noexpandtab
 set hidden "allow hidden buffers, no need for adding a !
 set pastetoggle=<F2> "toggles paste mode
@@ -145,4 +146,5 @@ if has("autocmd")
   autocmd FileType css setlocal shiftwidth=2 nowrap
   autocmd FileType less setlocal shiftwidth=2 nowrap
   autocmd FileType scss setlocal shiftwidth=2 nowrap
+  "autocmd FileType c setlocal shiftwidth=2
 endif
