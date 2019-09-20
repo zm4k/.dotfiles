@@ -5,9 +5,8 @@ filetype off "required
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path for Vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim' "let Vundle manage Vundle, required
-"set shell=/bin/bash "needed because I'm using the fish shell
-set shell=/usr/bin/fish "needed because I'm using the fish shell
-"run :PluginInstall
+set shell=/bin/bash "needed because I'm using the fish shell
+"to install new plugins run :PluginInstall
 "
 "--UltiSnips--
 Plugin 'SirVer/ultisnips' "UltiSnip engine
@@ -40,15 +39,20 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 "
-"--Fugitive--"
+"--Fugitive--
 Plugin 'tpope/vim-fugitive'
+"
+"--Insert or delete brackets, parens, quotes in pair--
+Plugin 'jiangmiao/auto-pairs'
 "
 " G E N E R A L ////////////////////////////////////////////////////////////////
 syntax enable
-colorscheme delek
+"colorscheme delek
 "colorscheme jellybeans
 "colorscheme distinguished
 "colorscheme zellner
+"colorscheme badwolf
+colorscheme goodwolf
 set encoding=utf-8
 set ff=unix "set ff=dos
 set wildmenu
@@ -75,7 +79,7 @@ set textwidth=80
 set lazyredraw
 set number
 "
-highlight colorcolumn ctermfg=black ctermbg=NONE cterm=bold
+highlight colorcolumn ctermfg=fg ctermbg=bg cterm=bold
 set colorcolumn=82
 "
 " S E A R C H //////////////////////////////////////////////////////////////////
