@@ -69,10 +69,10 @@ set scrolloff=40 "number of context lines above and below the cursor
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set matchpairs=(:),{:},[:],<:>
 set list "display all tabs and ends of lines
-set tabstop=2
-set softtabstop=2 "makes the spaces feel like real tabs
-set shiftwidth=2
-set expandtab "cause TAB characters to not be used "set noexpandtab
+set tabstop=8
+"set softtabstop=8 "makes the spaces feel like real tabs
+set shiftwidth=8
+"set expandtab "cause TAB characters to not be used "set noexpandtab
 set hidden "allow hidden buffers, no need for adding a !
 set pastetoggle=<F2> "toggles paste mode
 set textwidth=80
