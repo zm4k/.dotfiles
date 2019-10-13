@@ -115,6 +115,9 @@ nnoremap ff :w<enter>
 nnoremap <Leader>b :ls<CR>:b<Space>
 nnoremap <C-J> :bnext<CR>
 nnoremap <C-K> :bprev<CR>
+nnoremap <F3> :set spelllang=de<CR>:setlocal spell<CR>
+nnoremap <F4> :edit $MYVIMRC<CR>
+nnoremap <F5> :source $MYVIMRC<CR>
 
 nnoremap <silent> <leader>e4 :e $MYVIMRC<CR>
 nnoremap <silent> <leader>s4 :source $MYVIMRC<CR>
