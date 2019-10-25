@@ -66,6 +66,7 @@ set visualbell
 set showmatch
 "set cursorline
 set scrolloff=40 "number of context lines above and below the cursor
+set relativenumber
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set matchpairs=(:),{:},[:],<:>
 set list "display all tabs and ends of lines
