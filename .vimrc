@@ -65,7 +65,7 @@ set ruler
 set visualbell
 set showmatch
 "set cursorline
-set scrolloff=40 "number of context lines above and below the cursor
+set scrolloff=16 "number of context lines above and below the cursor
 set relativenumber
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 set matchpairs=(:),{:},[:],<:>
@@ -146,6 +146,8 @@ vnoremap _ /
 command! Thtml :%!tidy -config ~/.tidy -q 
 command! Whtml :%!tidy -config ~/.tidy -q --wrap 0
 command! Nhtml :%!tidy -config ~/.tidy -q --wrap 0 --indent 0
+command! Xe :%!xelatex reflexion.tex
+command! Xx :%!./xelatex.fish
 "
 " F I L E   S P E C I F I C ////////////////////////////////////////////////////
 if has("autocmd")
