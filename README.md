@@ -9,9 +9,7 @@ This repository contains .dotfiles for the following tools:
 ```shell
 mkdir -p ~/.dotfiles/
 cd ~/.dotfiles/
-mpw -u 'zm4k' -t x -p a github.com
-git clone https://github.com:zm4k/.dotfiles.git ~/git/dotfiles
-ln -sf ~/git/dotfiles/.tidy ~/.dotfiles
+git clone git@gitlab.com:zm4k/dotfiles.git ~/.dotfiles
 ln -sf ~/git/dotfiles/.tmux ~/.tmux
 ln -sf ~/git/dotfiles/.tmux.conf ~/.tmux.conf
 tmux
